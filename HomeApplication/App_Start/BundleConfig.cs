@@ -18,8 +18,8 @@ namespace HomeApplication
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+            bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
+                      "~/Scripts/materialize/materialize.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
@@ -27,7 +27,9 @@ namespace HomeApplication
             ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/materialize/css/materialize.min.css",
+                      "~/Content/materialize/font/material-design-icons/Material-Design-Icons.woff2",
+                      "~/Content/materialize/fonts/Roboto-Regular.woff2",
                       "~/Content/site.css"));
         }
     }

@@ -3,42 +3,118 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <nav class="red lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">
+                Logo
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="#">Home</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+
+
+
+
+
+
+@RenderBody()
+
+@*<footer class="page-footer red lighten-1">
+    <div class="container">
+        <div class="row">
+            <div class="col 16 s12">
+                <h5 class="white-text">Informacje</h5>
+                <p class="grey-text text-lighten-4">
+                    Lorem Ipsum
+                </p>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <div class="col 13 s12">
+                <h5 class="white-text">Ustawienia</h5>
+                <ul>
+                    <li><a class="white-text" href="#logo-container">Link 1</a></li>
+                    <li><a class="white-text" href="#logo-container">Link 2</a></li>
+                    <li><a class="white-text" href="#logo-container">Link 3</a></li>
                 </ul>
-                <p class="nav navbar-text navbar-right">Hello, @User.Identity.Name!</p>
+            </div>
+            <div class="col 13 s12">
+                <h5 class="white-text">Kontakt</h5>
+                <ul>
+                    <li><a class="white-text" href="#logo-container">Link 1</a></li>
+                    <li><a class="white-text" href="#logo-container">Link 2</a></li>
+                    <li><a class="white-text" href="#logo-container">Link 3</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by Damian Junko
+        </div>
     </div>
+</footer>*@
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/scripts")
-    @RenderSection("scripts", required: false)
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/materialize")
+@Scripts.Render("~/bundles/scripts")
+@RenderSection("scripts", required: false)
 </body>
 </html>
+
+
+
+
+
+
+
+@*<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Title</span>
+        </div>
+        <!-- Tabs -->
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
+            <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
+            <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
+            <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+            <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
+            <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+            <div class="page-content">@Html.ActionLink("Home", "Index", "Home")</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+            <div class="page-content">@Html.ActionLink("About", "About", "Home")</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+            <div class="page-content">@Html.ActionLink("Contact", "Contact", "Home")</div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+            <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+            <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+            <div class="page-content"><!-- Your content goes here --></div>
+        </section>
+    </main>
+</div>*@
+
+
