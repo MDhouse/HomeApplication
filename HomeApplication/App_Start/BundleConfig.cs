@@ -28,8 +28,6 @@ namespace HomeApplication
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize/css/materialize.min.css",
-                      "~/Content/materialize/font/material-design-icons/Material-Design-Icons.woff2",
-                      "~/Content/materialize/fonts/Roboto-Regular.woff2",
                       "~/Content/site.css"));
         }
     }
