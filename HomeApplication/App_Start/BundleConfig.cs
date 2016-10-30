@@ -28,6 +28,7 @@ namespace HomeApplication
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/materialize/css/materialize.min.css",
+                      "~/Content/materialize/css/materialdesignicons.min.css",
                       "~/Content/site.css"));
         }
     }

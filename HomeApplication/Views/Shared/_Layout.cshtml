@@ -6,6 +6,8 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/scripts")
+    @Scripts.Render("~/bundles/jquery")
 </head>
 <body>
 <nav class="red lighten-1" role="navigation">
@@ -15,16 +17,22 @@
         </a>
         <ul class="right hide-on-med-and-down">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Forms Test", "FormsTest", "Home")</li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Forms Test", "FormsTest", "Home")</li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse">
-            <i class="material-icons">menu</i>
+            <i class="mdi mdi-menu"></i>
         </a>
     </div>
 </nav>
-<main>@RenderBody()</main>
+<main>
+    <div class="container">
+        @RenderBody()
+    </div>
+</main>
 
     <footer class="page-footer red lighten-1">
         <div class="container">
@@ -36,10 +44,10 @@
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Links</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Link 4</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,87 +55,16 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2014 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
             </div>
         </div>
     </footer>
 
-@*<footer class="page-footer red lighten-1">
-    <div class="container">
-        <div class="row">
-            <div class="col 16 s12">
-                <h5 class="white-text">Informacje</h5>
-                <p class="grey-text text-lighten-4">
-                    Lorem Ipsum
-                </p>
-            </div>
-            <div class="col 12 s12">
-                <h5 class="white-text">Kontakt</h5>
-                <ul>
-                    <li><a class="white-text" href="#logo-container">Link 1</a></li>
-                    <li><a class="white-text" href="#logo-container">Link 2</a></li>
-                    <li><a class="white-text" href="#logo-container">Link 3</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Made by Damian Junko
-
-        </div>
-    </div>
-</footer>*@
 
 @Scripts.Render("~/bundles/jquery")
 @Scripts.Render("~/bundles/materialize")
 @Scripts.Render("~/bundles/scripts")
+
 @RenderSection("scripts", required: false)
 </body>
 </html>
-
-
-
-
-
-
-
-@*<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <!-- Title -->
-            <span class="mdl-layout-title">Title</span>
-        </div>
-        <!-- Tabs -->
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-            <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Tab 1</a>
-            <a href="#scroll-tab-2" class="mdl-layout__tab">Tab 2</a>
-            <a href="#scroll-tab-3" class="mdl-layout__tab">Tab 3</a>
-            <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
-            <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
-            <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
-        </div>
-    </header>
-    <main class="mdl-layout__content">
-        <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-            <div class="page-content">@Html.ActionLink("Home", "Index", "Home")</div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-            <div class="page-content">@Html.ActionLink("About", "About", "Home")</div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-            <div class="page-content">@Html.ActionLink("Contact", "Contact", "Home")</div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-            <div class="page-content"><!-- Your content goes here --></div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-            <div class="page-content"><!-- Your content goes here --></div>
-        </section>
-        <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-            <div class="page-content"><!-- Your content goes here --></div>
-        </section>
-    </main>
-</div>*@
-
-

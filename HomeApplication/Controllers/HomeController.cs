@@ -13,6 +13,11 @@ namespace HomeApplication.Controllers
             return View();
         }
 
+        public ActionResult FormsTest()
+        {
+            ViewBag.Message = "Formularz validacyjny";
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
