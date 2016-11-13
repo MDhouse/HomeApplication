@@ -4,19 +4,25 @@
 }
 
 <h3>FormsTest</h3>
+
 <div class="row">
-    <form>
+    <form id="js-formTestData">
         <div class="input-field col s7">
-            <input class="validate" type="text" id="telefon">
+            <input class="validate" type="text" id="telefon" name="telefon">
             <label for="telefon" data-error="wrong" data-success="right">Telefon</label>
         </div>
         <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
+            <input id="email" type="email" class="data validate" name="email">
             <label for="email" data-error="wrong" data-success="right">Email</label>
         </div>
         <div class="input-field col s12">
-            <input id="data" type="text" class="validate datepicker">
+            <input id="data" type="text" class="validate" name="data">
             <label for="data" data-error="wrong" data-success="right">Data</label>
         </div>
     </form>
+</div>
+
+<div class="row" id="js-TestForm">
+    <a class="waves-effect waves-light btn" id="js-FormTestSaveBtn">Save</a>
+    <a class="waves-effect waves-light btn" id="js-FormTestCancelBtn">Cancel</a>
 </div>
